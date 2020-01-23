@@ -18,7 +18,7 @@ Text given in input is parsed and then matched to the sub-categories by handwrit
 
 
 ## Output
-For each category returns a `matches` object containing:
+For each category returns a `matches` list containing:
 
 - a numeric id for the matched sub-category
 - a number that states the point in the sentence where the match starts
