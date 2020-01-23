@@ -1,0 +1,7 @@
+boarder
+cohabitant
+flatmate
+housemate
+romie
+roommate
+roomy

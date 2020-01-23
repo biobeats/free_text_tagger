@@ -1,0 +1,13 @@
+bathroom
+bed
+bedroom
+chair
+couch
+dining room
+garage
+home
+home office
+kitchen
+living room
+pantry
+sofa

@@ -1,0 +1,11 @@
+acquaintance
+doctor
+g.p.
+general partictioner
+gp
+physician
+stranger
+vet
+veterinary
+teacher
+professor

@@ -1,0 +1,7 @@
+campus
+class
+classroom
+college
+school
+uni
+university

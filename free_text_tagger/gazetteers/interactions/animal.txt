@@ -1,0 +1,12 @@
+animal
+cat
+cub
+dog
+doggie
+doggo
+doggy
+kitten
+kitty
+pet
+pup
+puppy

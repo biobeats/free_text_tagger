@@ -1,0 +1,19 @@
+aeroplane
+airplane
+airport
+bus
+bus station
+cab
+car
+commute
+metro
+plane
+station
+taxi
+train
+train station
+travel
+traveling
+travelling
+tube
+underground
