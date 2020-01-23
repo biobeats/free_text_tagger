@@ -1,4 +1,0 @@
-chore
-clean
-nurse
-wait
