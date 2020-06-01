@@ -65,8 +65,8 @@ def match_interactions(sentence):
 
 if __name__ == "__main__":
 
-    sentence = "Here goes the sentence to be analyzed"
-
+    # sentence = "Here goes the sentence to be analyzed"
+    sentence = "We're playing games"
     # analyze sentence
     sentence = analyzer.substitute_dash(sentence)  # substitute dash with full stop for better parsing
     sentence = nlp(sentence)
@@ -74,7 +74,18 @@ if __name__ == "__main__":
     # return tags
     for sent in sentence.sents:
         sent = sent.as_doc()
-        int_id, int_span = match_interactions(sent)
-        pl_id, pl_span = match_places(sent)
-        emo_id, emo_span = match_emotions(sent)
-        act_id, act_span = match_activities(sent)
+        res = {}
+        int_id, int_span = None, None if match_interactions(sent) is None else match_interactions(sent)
+        pl_id, pl_span =  None, None if match_places(sent) is None else match_places(sent)
+        emo_id, emo_span = None, None if match_emotions(sent) is None else match_emotions(sent)
+        act_id, act_span = None, None if match_activities(sent) is None else match_activities(sent) 
+        res['int_id'] = int_id        
+        res['int_span'] = int_span        
+        res['pl_id'] = pl_id        
+        res['pl_span'] = pl_span        
+        res['emo_id'] = emo_id        
+        res['emo_span'] = emo_span        
+        res['act_id'] = act_id        
+        res['act_span'] = act_span
+        print(res)
+
