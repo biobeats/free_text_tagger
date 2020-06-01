@@ -11,6 +11,7 @@ from free_text_tagger_v2 import activities_matcher
 from free_text_tagger_v2 import emotions_matcher
 from free_text_tagger_v2 import interactions_matcher
 from free_text_tagger_v2 import places_matcher
+import sys
 
 
 nlp = spacy.load('en_core_web_lg')
@@ -66,11 +67,11 @@ def match_interactions(sentence):
 if __name__ == "__main__":
 
     # sentence = "Here goes the sentence to be analyzed"
-    sentence = "We're playing games"
+    sentence = sys.argv[1]
     # analyze sentence
     sentence = analyzer.substitute_dash(sentence)  # substitute dash with full stop for better parsing
     sentence = nlp(sentence)
-
+    responses = []
     # return tags
     for sent in sentence.sents:
         sent = sent.as_doc()
@@ -87,5 +88,7 @@ if __name__ == "__main__":
         res['emo_span'] = emo_span        
         res['act_id'] = act_id        
         res['act_span'] = act_span
-        print(res)
+        responses.append(res)
+    
+    print(responses)
 
